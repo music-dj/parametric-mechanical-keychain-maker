@@ -6,6 +6,9 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/music-dj/parametric-mechanical-keychain-maker/releases/latest">
+    <img src="https://img.shields.io/badge/Download-Windows%20.EXE%20(v1.0.0)-blue?style=for-the-badge&logo=windows" alt="Download Windows EXE">
+  </a>
   <img src="https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&logo=python" alt="Python Version">
   <img src="https://img.shields.io/badge/GUI-PyQt6-green.svg?style=for-the-badge&logo=qt" alt="PyQt6">
   <img src="https://img.shields.io/badge/CAD-OpenSCAD-orange.svg?style=for-the-badge" alt="OpenSCAD">
