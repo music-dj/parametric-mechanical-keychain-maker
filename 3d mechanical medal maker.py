@@ -19,8 +19,17 @@ from PyQt6.QtCore import Qt, QThread, pyqtSignal
 from PyQt6.QtGui import QFont, QPalette, QColor, QPixmap
 
 # --- Constants & Default Paths ---
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-SCAD_FILE = os.path.join(SCRIPT_DIR, "template.scad")
+if getattr(sys, 'frozen', False):
+    SCRIPT_DIR = os.path.dirname(sys.executable)
+    BUNDLE_DIR = getattr(sys, '_MEIPASS', SCRIPT_DIR)
+else:
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    BUNDLE_DIR = SCRIPT_DIR
+
+SCAD_FILE = os.path.join(BUNDLE_DIR, "template.scad")
+if not os.path.exists(SCAD_FILE):
+    SCAD_FILE = os.path.join(SCRIPT_DIR, "template.scad")
+
 CONFIG_FILE = os.path.join(SCRIPT_DIR, "keychain_config.json")
 
 DEFAULT_OPENSCAD_PATHS = [
